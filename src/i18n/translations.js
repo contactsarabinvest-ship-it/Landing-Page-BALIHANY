@@ -110,4 +110,4 @@ export const translations = {
 };
 
 export const localeNames = { en: 'English', fr: 'Français', ar: 'العربية' };
-export const defaultLocale = 'en';
+export const defaultLocale = 'fr';
