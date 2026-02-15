@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --color-sand: #e8e4df;
+  --color-beige: #f5f2ed;
+  --color-cream: #faf9f7;
+  --color-sage: #9caa8a;
+  --color-sage-dark: #7d8b6a;
+  --color-sand-dark: #d4cfc8;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+  margin: 0;
+}
+
+.font-display { font-family: var(--font-display); }
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(0.5rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+  opacity: 0;
+  animation: fade-in 0.5s ease-out forwards;
+}
+.animate-delay-150 { animation-delay: 150ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-500 { animation-delay: 500ms; }
