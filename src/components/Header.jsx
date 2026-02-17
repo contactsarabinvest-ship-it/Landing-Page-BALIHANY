@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { localeNames } from '../i18n/translations';
+import logo from '../assets/balihany-logo.png';
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -42,7 +43,10 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-sand-dark/30">
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="font-display text-2xl font-semibold text-stone-800 hover:text-sage transition-colors">BALIHANY</a>
+        <a href="#" className="flex items-center gap-3 font-display text-2xl font-semibold text-stone-800 hover:text-sage transition-colors">
+          <img src={logo} alt="Balihany" className="h-10 w-auto" />
+          <span>BALIHANY</span>
+        </a>
         <nav className="hidden sm:flex items-center gap-6">
           {navLinks.map((link) => <a key={link.href} href={link.href} className="text-sm font-medium text-stone-600 hover:text-sage transition-colors">{link.label}</a>)}
           <LangDropdown refProp={langRef} />

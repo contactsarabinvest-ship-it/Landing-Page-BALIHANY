@@ -1,0 +1,7 @@
+cd "c:\Users\benki\OneDrive\Documents\Landing page Balihany"
+git add .
+git commit -m "langue fr first"
+git push
+
+
+npm run dev
